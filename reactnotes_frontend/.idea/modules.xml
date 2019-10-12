@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/reactnotesfrontend.iml" filepath="$PROJECT_DIR$/.idea/reactnotesfrontend.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/reactnotes_frontend.iml" filepath="$PROJECT_DIR$/.idea/reactnotes_frontend.iml" />
     </modules>
   </component>
 </project>
