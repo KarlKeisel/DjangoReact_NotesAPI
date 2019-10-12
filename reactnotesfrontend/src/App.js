@@ -1,26 +1,28 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import {Route, Switch, BrowserRouter} from 'react-router-dom';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+import {Provider} from "react-redux";
+import {createStore} from "redux";
+import notesApp from "./reducers";
+
+import NoteMain from "./components/NoteMain"
+import NotFound from "./components/NotFound"
+
+let store = createStore(notesApp);
+
+class App extends React.Component {
+    render() {
+        return (
+            <Provider store={store}>
+                <BrowserRouter>
+                    <Switch>
+                        <Route exact path="/" component={NoteMain}/>
+                        <Route component={NotFound}/>
+                    </Switch>
+                </BrowserRouter>
+            </Provider>
+        );
+    }
 }
 
 export default App;
