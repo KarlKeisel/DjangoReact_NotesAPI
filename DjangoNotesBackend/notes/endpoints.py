@@ -6,7 +6,8 @@ from .api import NoteViewSet, RegistrationAPI, LoginAPI, UserAPI
 
 # Takes the endpoint created in api.py and creates a url path to it.
 router = routers.DefaultRouter()
-router.register('notes', NoteViewSet)
+router.register('notes', NoteViewSet, 'notes')
+# Final 'notes' needed since NoteViewSet no longer has queryset att. (Due to auth)
 
 urlpatterns = [
     url("", include(router.urls)),

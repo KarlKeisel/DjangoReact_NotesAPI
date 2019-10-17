@@ -8,10 +8,22 @@ from .serializers import NoteSerializer, CreateUserSerializer, UserSerializer, L
 
 
 # Takes the converted serializer and equips it with an API endpoint to talk to the model
-class NoteViewSet(viewsets.ModelViewSet):
-    queryset = Note.objects.all()
-    permission_classes = [permissions.AllowAny, ]  # Expects an iterable
+
+# class NoteViewSet(viewsets.ModelViewSet):  # Regular non-auth version
+#     queryset = Note.objects.all()
+#     permission_classes = [permissions.AllowAny, ]  # Expects an iterable
+#     serializer_class = NoteSerializer
+
+
+class NoteViewSet(viewsets.ModelViewSet):  # Auth version Notes view
+    permission_classes = [permissions.IsAuthenticated, ]
     serializer_class = NoteSerializer
+
+    def get_queryset(self):
+        return self.request.user.notes.all()
+
+    def perform_create(self, serializer):
+        serializer.save(owner=self.request.user)
 
 
 # Create an API that validates registration data
