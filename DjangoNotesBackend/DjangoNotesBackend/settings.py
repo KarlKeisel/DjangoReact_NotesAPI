@@ -41,7 +41,13 @@ INSTALLED_APPS = [
     'notes.apps.NotesConfig',
     'corsheaders',
     'rest_framework',
+    'knox',
+
 ]
+
+# corsheaders for API calls
+# rest_framework to allow an API endpoints
+# know for more robust user authentication
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
@@ -53,6 +59,8 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
     'corsheaders.middleware.CorsMiddleware',
 ]
+
+# corsheaders also required in middleware
 
 ROOT_URLCONF = 'DjangoNotesBackend.urls'
 
@@ -138,3 +146,8 @@ STATIC_URL = '/static/'
 CORS_ORIGIN_WHITELIST = [
     'localhost:3000',
 ]
+
+# Rest framework settings
+REST_FRAMEWORK = {
+    'DEFAULT_AUTHENTICATION_CLASSES': ('knox.auth.TokenAuthentication', ),
+}

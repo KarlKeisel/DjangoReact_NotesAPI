@@ -23,6 +23,7 @@ from notes import endpoints
 urlpatterns = [
     url('admin/', admin.site.urls),
     url('api/', include(endpoints)),
+    url('api/auth/', include('knox.urls')),
     url('', TemplateView.as_view(template_name="index.html"))
 ]
 

@@ -2,17 +2,16 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6187a150-0acc-4baa-aea2-e616d5a477eb" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/dictionaries/CaducityXTop.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/notes/migrations/0002_note_owner.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/DjangoNotesBackend/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/DjangoNotesBackend/settings.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/DjangoNotesBackend/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/DjangoNotesBackend/urls.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/notes/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/notes/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../reactnotesfrontend/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/../reactnotesfrontend/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../reactnotesfrontend/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/../reactnotesfrontend/src/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../reactnotesfrontend/src/actions/notes.js" beforeDir="false" afterPath="$PROJECT_DIR$/../reactnotesfrontend/src/actions/notes.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../reactnotesfrontend/src/components/NoteMain.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/../reactnotesfrontend/src/components/NoteMain.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../reactnotesfrontend/src/reducers/notes.js" beforeDir="false" afterPath="$PROJECT_DIR$/../reactnotesfrontend/src/reducers/notes.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../reactnotesfrontend/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../reactnotesfrontend/yarn.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/notes/api.py" beforeDir="false" afterPath="$PROJECT_DIR$/notes/api.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/notes/endpoints.py" beforeDir="false" afterPath="$PROJECT_DIR$/notes/endpoints.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/notes/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/notes/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/notes/serializers.py" beforeDir="false" afterPath="$PROJECT_DIR$/notes/serializers.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -105,7 +104,7 @@
       <option name="presentableId" value="Default" />
       <updated>1570733850471</updated>
       <workItem from="1570734019102" duration="5879000" />
-      <workItem from="1570849371486" duration="6925000" />
+      <workItem from="1570849371486" duration="9848000" />
     </task>
     <servers />
   </component>
