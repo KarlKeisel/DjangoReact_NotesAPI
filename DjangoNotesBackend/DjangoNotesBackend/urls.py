@@ -21,7 +21,8 @@ from django.views.generic import TemplateView
 from notes import endpoints
 
 urlpatterns = [
-    url('api/', include(endpoints)),
     url('admin/', admin.site.urls),
+    url('api/', include(endpoints)),
     url('', TemplateView.as_view(template_name="index.html"))
 ]
+

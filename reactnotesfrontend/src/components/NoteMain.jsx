@@ -11,6 +11,10 @@ class NoteMain extends React.Component {
         updateNoteId: null,
     };
 
+    componentDidMount() {
+        this.props.fetchNotes();
+    }
+
     resetForm = () => {
         this.setState({text: "", updateNoteId: null})
     };
@@ -23,9 +27,11 @@ class NoteMain extends React.Component {
     submitNote = (e) => {
         e.preventDefault();
         this.state.updateNoteId === null ?
-            this.props.addNote(this.state.text) :
-            this.props.updateNote(this.state.updateNoteId, this.state.text);
-        this.resetForm();
+            this.props.addNote(this.state.text)
+                .then(this.resetForm) :  // API Version to help with chaining.
+            this.props.updateNote(this.state.updateNoteId, this.state.text)
+                .then(this.resetForm);
+        // this.resetForm();  // Non API version.
         // TODO Find a way to focus on 'input-line' on submit.
     };
 
@@ -79,13 +85,18 @@ const mapStateToProps = state => {
 const mapDispatchToProps = dispatch => {
     return {
         addNote: (text) => {
-            dispatch(notes.addNote(text));
+            // dispatch(notes.addNote(text));  // Non API Version
+            return dispatch(notes.addNote(text));  // API Version to allow additional callbacks.
         },
         updateNote: (id, text) => {
-            dispatch(notes.updateNote(id, text));
+            // dispatch(notes.updateNote(id, text));  // Non API Version
+            return dispatch(notes.updateNote(id, text));  // API Version
         },
         deleteNote: (id) => {
             dispatch(notes.deleteNote(id));
+        },
+        fetchNotes: () => {
+            dispatch(notes.fetchNotes());
         },
     }
 };
