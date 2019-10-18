@@ -1,6 +1,6 @@
 import React from 'react';
 import {connect} from 'react-redux';
-import {notes} from "../actions";
+import {notes, auth} from "../actions";
 
 // Kept import to remind about links through 'react-router-dom'
 // import {Link} from "react-router-dom";
@@ -40,6 +40,10 @@ class NoteMain extends React.Component {
             <div>
                 <h2>Welcome to Karl's Note tracker!</h2>
                 <hr/>
+                <div style={{textAlign: "right"}}>
+                    {/* TODO Handle styling of this area, and fix <a> tag.*/}
+                    {this.props.user.username} (<a onClick={this.props.logout}>logout</a>)
+                </div>
 
                 <h3>Add new note</h3>
                 <form onSubmit={this.submitNote}>
@@ -78,6 +82,7 @@ class NoteMain extends React.Component {
 const mapStateToProps = state => {
     return {
         notes: state.notes,
+        user: state.auth.user,
     }
 };
 
@@ -98,6 +103,7 @@ const mapDispatchToProps = dispatch => {
         fetchNotes: () => {
             dispatch(notes.fetchNotes());
         },
+        logout: () => dispatch(auth.logout()),
     }
 };
 
