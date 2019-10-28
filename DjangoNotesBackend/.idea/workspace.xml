@@ -2,15 +2,56 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6187a150-0acc-4baa-aea2-e616d5a477eb" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/../reactnotesfrontend/src/components/Register.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../reactnotesfrontend/src/assets/img/ForestFog.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../reactnotesfrontend/src/assets/img/ScatteredPapers.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../reactnotesfrontend/src/assets/img/WritingAtDesk.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../reactnotesfrontend/src/assets/img/WritingImplements.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../reactnotesfrontend/src/assets/img/notlostbuthere.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../reactnotesfrontend/src/assets/jss/buttonStyle.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../reactnotesfrontend/src/assets/jss/cardBodyStyle.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../reactnotesfrontend/src/assets/jss/cardFooterStyle.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../reactnotesfrontend/src/assets/jss/cardHeaderStyle.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../reactnotesfrontend/src/assets/jss/cardStyle.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../reactnotesfrontend/src/assets/jss/customInputStyle.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../reactnotesfrontend/src/assets/jss/general.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../reactnotesfrontend/src/assets/jss/headerStyle.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../reactnotesfrontend/src/assets/jss/imageStyles.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../reactnotesfrontend/src/assets/jss/infoStyle.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../reactnotesfrontend/src/assets/jss/landingPage.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../reactnotesfrontend/src/assets/jss/landingPageSections/productStyle.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../reactnotesfrontend/src/assets/jss/landingPageSections/teamStyle.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../reactnotesfrontend/src/assets/jss/landingPageSections/workStyle.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../reactnotesfrontend/src/assets/jss/loginPage.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../reactnotesfrontend/src/assets/jss/menu.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../reactnotesfrontend/src/assets/jss/notesMain.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../reactnotesfrontend/src/assets/jss/parallaxStyle.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../reactnotesfrontend/src/assets/jss/registerPage.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../reactnotesfrontend/src/components/Card/Card.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../reactnotesfrontend/src/components/Card/CardBody.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../reactnotesfrontend/src/components/Card/CardFooter.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../reactnotesfrontend/src/components/Card/CardHeader.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../reactnotesfrontend/src/components/CustomButtons/Button.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../reactnotesfrontend/src/components/CustomInput/CustomInput.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../reactnotesfrontend/src/components/Grid/GridContainer.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../reactnotesfrontend/src/components/Grid/GridItem.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../reactnotesfrontend/src/components/InfoArea/InfoArea.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../reactnotesfrontend/src/components/LandingPage.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../reactnotesfrontend/src/components/LandingPageSections/ProductSection.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../reactnotesfrontend/src/components/Menu.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../reactnotesfrontend/src/components/Menu/MenuItem.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../reactnotesfrontend/src/components/Menu/menuList.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../reactnotesfrontend/src/components/Parallax/Parallax.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../reactnotesfrontend/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/../reactnotesfrontend/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../reactnotesfrontend/src/App.css" beforeDir="false" afterPath="$PROJECT_DIR$/../reactnotesfrontend/src/App.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../reactnotesfrontend/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/../reactnotesfrontend/src/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../reactnotesfrontend/src/actions/auth.js" beforeDir="false" afterPath="$PROJECT_DIR$/../reactnotesfrontend/src/actions/auth.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../reactnotesfrontend/src/actions/notes.js" beforeDir="false" afterPath="$PROJECT_DIR$/../reactnotesfrontend/src/actions/notes.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../reactnotesfrontend/src/components/Login.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/../reactnotesfrontend/src/components/Login.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../reactnotesfrontend/src/components/NotFound.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/../reactnotesfrontend/src/components/NotFound.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../reactnotesfrontend/src/components/NoteMain.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/../reactnotesfrontend/src/components/NoteMain.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../reactnotesfrontend/src/reducers/auth.js" beforeDir="false" afterPath="$PROJECT_DIR$/../reactnotesfrontend/src/reducers/auth.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../reactnotesfrontend/src/components/Register.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/../reactnotesfrontend/src/components/Register.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../reactnotesfrontend/src/reducers/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/../reactnotesfrontend/src/reducers/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../reactnotesfrontend/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../reactnotesfrontend/yarn.lock" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -103,7 +144,8 @@
       <option name="presentableId" value="Default" />
       <updated>1570733850471</updated>
       <workItem from="1570734019102" duration="5879000" />
-      <workItem from="1570849371486" duration="14130000" />
+      <workItem from="1570849371486" duration="15976000" />
+      <workItem from="1572142033615" duration="911000" />
     </task>
     <servers />
   </component>
@@ -115,7 +157,9 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
           </value>
         </entry>
       </map>

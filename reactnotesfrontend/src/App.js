@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, {Component} from 'react';
 import {Route, Switch, BrowserRouter, Redirect} from 'react-router-dom';
 
 import {Provider, connect} from "react-redux";
@@ -12,6 +12,10 @@ import NoteMain from "./components/NoteMain"
 import NotFound from "./components/NotFound"
 import Login from "./components/Login";
 import Register from "./components/Register";
+import LandingPage from "./components/LandingPage";
+import Menu from "./components/Menu";
+
+import "./App.css";
 
 let store = createStore(notesApp, applyMiddleware(thunk));
 
@@ -26,24 +30,26 @@ class RootContainerComponent extends Component {
             if (this.props.auth.isLoading) {
                 return <em>Loading...</em>;
             } else if (!this.props.auth.isAuthenticated) {
-                return <Redirect to={"/login"} />
+                return <Redirect to={"/login"}/>
             } else {
                 return <ChildComponent {...props} />
             }
-        }} />
+        }}/>
     };
 
     render() {
         let {PrivateRoute} = this;
         return (
-                <BrowserRouter>
-                    <Switch>
-                        <PrivateRoute exact path="/" component={NoteMain}/>
-                        <Route exact path="/register" component={Register} />
-                        <Route exact path="/login" component={Login}/>
-                        <Route component={NotFound}/>
-                    </Switch>
-                </BrowserRouter>
+            <BrowserRouter>
+                <Menu />
+                <Switch>
+                    <PrivateRoute exact path="/notes" component={NoteMain}/>
+                    <Route exact path="/" component={LandingPage}/>
+                    <Route exact path="/register" component={Register}/>
+                    <Route exact path="/login" component={Login}/>
+                    <Route component={NotFound}/>
+                </Switch>
+            </BrowserRouter>
         );
     }
 }

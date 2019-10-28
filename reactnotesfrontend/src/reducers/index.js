@@ -6,4 +6,13 @@ const notesApp = combineReducers({
     notes, auth,
 });
 
-export default notesApp
+const rootReducer = (state, action) => {
+    if (action.type === 'AUTHENTICATION_ERROR') {
+        state.notes = [];
+        state.token = null;
+    }
+
+    return notesApp(state, action)
+};
+
+export default rootReducer

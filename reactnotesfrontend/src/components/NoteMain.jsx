@@ -15,6 +15,7 @@ class NoteMain extends React.Component {
         this.props.fetchNotes();
     }
 
+
     resetForm = () => {
         this.setState({text: "", updateNoteId: null})
     };
@@ -32,7 +33,6 @@ class NoteMain extends React.Component {
             this.props.updateNote(this.state.updateNoteId, this.state.text)
                 .then(this.resetForm);
         // this.resetForm();  // Non API version.
-        // TODO Find a way to focus on 'input-line' on submit.
     };
 
     render() {
@@ -42,7 +42,7 @@ class NoteMain extends React.Component {
                 <hr/>
                 <div style={{textAlign: "right"}}>
                     {/* TODO Handle styling of this area, and fix <a> tag.*/}
-                    {this.props.user.username} (<a onClick={this.props.logout}>logout</a>)
+                    {this.props.user.username} : <button onClick={this.props.logout}>logout</button>
                 </div>
 
                 <h3>Add new note</h3>
@@ -103,6 +103,7 @@ const mapDispatchToProps = dispatch => {
         fetchNotes: () => {
             dispatch(notes.fetchNotes());
         },
+
         logout: () => dispatch(auth.logout()),
     }
 };
