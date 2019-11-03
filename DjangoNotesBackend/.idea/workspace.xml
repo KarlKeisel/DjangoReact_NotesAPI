@@ -1,24 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="6187a150-0acc-4baa-aea2-e616d5a477eb" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/../reactnotesfrontend/src/components/Logout.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../reactnotesfrontend/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/../reactnotesfrontend/src/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../reactnotesfrontend/src/assets/jss/noteTableStyle.js" beforeDir="false" afterPath="$PROJECT_DIR$/../reactnotesfrontend/src/assets/jss/noteTableStyle.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../reactnotesfrontend/src/assets/jss/notesMain.js" beforeDir="false" afterPath="$PROJECT_DIR$/../reactnotesfrontend/src/assets/jss/notesMain.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../reactnotesfrontend/src/assets/jss/sidePage.js" beforeDir="false" afterPath="$PROJECT_DIR$/../reactnotesfrontend/src/assets/jss/sidePage.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../reactnotesfrontend/src/components/Example.jsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../reactnotesfrontend/src/components/Menu/HeaderLinks.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/../reactnotesfrontend/src/components/Menu/HeaderLinks.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../reactnotesfrontend/src/components/Menu/Menu.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/../reactnotesfrontend/src/components/Menu/Menu.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../reactnotesfrontend/src/components/Menu/menuList.js" beforeDir="false" afterPath="$PROJECT_DIR$/../reactnotesfrontend/src/components/Menu/menuList.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../reactnotesfrontend/src/components/MenuBar.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/../reactnotesfrontend/src/components/MenuBar.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../reactnotesfrontend/src/components/NoteMain.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/../reactnotesfrontend/src/components/NoteMain.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../reactnotesfrontend/src/components/NoteRow.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/../reactnotesfrontend/src/components/NoteRow.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../reactnotesfrontend/src/reducers/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/../reactnotesfrontend/src/reducers/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../reactnotesfrontend/src/reducers/notes.js" beforeDir="false" afterPath="$PROJECT_DIR$/../reactnotesfrontend/src/reducers/notes.js" afterDir="false" />
-    </list>
+    <list default="true" id="6187a150-0acc-4baa-aea2-e616d5a477eb" name="Default Changelist" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
