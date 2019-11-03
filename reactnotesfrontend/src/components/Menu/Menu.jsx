@@ -1,5 +1,8 @@
 import React from 'react';
 
+import { useSelector, useDispatch } from "react-redux";
+import { auth } from "../../actions"
+
 import classNames from "classnames";
 
 import {makeStyles, Typography} from '@material-ui/core';
@@ -19,12 +22,17 @@ import {motion} from "framer-motion";
 
 import styles from "../../assets/jss/headerStyle";
 
-// TODO Make Menu look better! Look at Material React Kit
-
 const useStyles = makeStyles(styles);
 
 export default function Menu(props) {
     const classes = useStyles();
+
+    const user = useSelector((state) => state.auth.user);
+    const isAuth = useSelector((state) => state.auth.isAuthenticated);
+
+    const dispatch = useDispatch();
+    const logout = () => dispatch(auth.logout());
+
     const [state, setState] = React.useState({
         left: false,
     });
@@ -75,9 +83,6 @@ export default function Menu(props) {
         [classes.fixed]: fixed
     });
     const brandComponent = <Button className={classes.title}>{brand}</Button>;
-
-
-    // TODO Work on Logout / Login toggles
 
     const sideList = side => (
         <div

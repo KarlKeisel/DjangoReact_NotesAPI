@@ -9,7 +9,6 @@ const notesApp = combineReducers({
 const rootReducer = (state, action) => {
     if (action.type === 'AUTHENTICATION_ERROR') {
         state.notes = [];
-        state.token = null;
     }
 
     return notesApp(state, action)

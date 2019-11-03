@@ -3,8 +3,17 @@ import {connect} from 'react-redux';
 import {notes, auth} from "../actions";
 
 import {withStyles} from "@material-ui/core";
-
 import styles from "../assets/jss/notesMain"
+
+import NoteAddIcon from '@material-ui/icons/NoteAdd';
+import RotateLeftIcon from '@material-ui/icons/RotateLeft';
+
+import image from "../assets/img/ScatteredPapers.jpg"
+
+import TextField from "@material-ui/core/TextField";
+import Paper from "@material-ui/core/Paper";
+import Button from "./CustomButtons/Button"
+
 import {compose} from "redux";
 import NoteTable from "./Note/NoteTable";
 
@@ -18,7 +27,6 @@ class NoteMain extends React.Component {
         this.props.fetchNotes();
     }
 
-
     resetForm = () => {
         this.setState({text: "", updateNoteId: null})
     };
@@ -27,6 +35,8 @@ class NoteMain extends React.Component {
         let note = this.props.notes[id];
         this.setState({text: note.text, updateNoteId: id})
     };
+
+    // Saving note under edit glitches, fixes on refresh.
 
     submitNote = (e) => {
         e.preventDefault();
@@ -38,34 +48,57 @@ class NoteMain extends React.Component {
         // this.resetForm();  // Non API version.
     };
 
-
     render() {
 
         const {classes} = this.props;
 
         return (
-            <div>
-                <h2 className={classes.title}>Welcome to Karl's Note tracker!</h2>
-                <hr/>
-                <div style={{textAlign: "right"}}>
-                    {/* TODO Handle styling of this area, and fix <a> tag.*/}
-                    {this.props.user.username} : <button onClick={this.props.logout}>logout</button>
+            <div
+                className={classes.pageHeader}
+                style={{
+                    backgroundImage: "url(" + image + ")",
+                    backgroundSize: "cover",
+                    backgroundPosition: "top center",
+                }}
+            >
+                <div className={classes.menuBackground}>
                 </div>
-
-                <h3>Add new note</h3>
-                <form onSubmit={this.submitNote}>
-                    <input
-                        className={'input-line'}
-                        value={this.state.text}
-                        placeholder={'Enter new note...'}
-                        onChange={(e) => this.setState({text: e.target.value})}
-                        required/>
-                    <input type={'submit'} value={'Save Note'}/>
-                    <button onClick={this.resetForm}>Reset</button>
-                </form>
-                <br />
+                <div className={classes.container} style={{paddingTop: "120px"}}>
+                    <Paper style={{padding: "10px 5%"}}>
+                        <form onSubmit={this.submitNote}>
+                            <TextField
+                                fullWidth
+                                value={this.state.text}
+                                label={"New Notes Here..."}
+                                onChange={(e) => this.setState({text: e.target.value})}
+                                required
+                            />
+                            <br/>
+                            <Button
+                                style={{marginLeft: "10%"}}
+                                round
+                                color={"info"}
+                                type={"submit"}
+                            >
+                                <NoteAddIcon className={classes.icons}/>
+                                Save Note!
+                            </Button>
+                            <Button
+                                round
+                                color={"rose"}
+                                onClick={this.resetForm}
+                            >
+                                <RotateLeftIcon className={classes.icons} />
+                                Reset Note.
+                            </Button>
+                        </form>
+                    </Paper>
+                </div>
+                <br/>
                 {(this.props.notes).length === 0 && this.props.notes.constructor === Array
-                    ? <h3>Enter a note and save to begin your new life of organization!</h3>
+                    ? <Paper className={classes.container} style={{textAlign: "center"}}>
+                        <h2>Enter a note and save to begin your new life of organization!</h2>
+                    </Paper>
                     : <NoteTable
                         notes={this.props.notes}
                         updateNotes={this.selectForEdit}

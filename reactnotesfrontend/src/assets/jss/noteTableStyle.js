@@ -16,6 +16,7 @@ const noteTableStyle = {
         border: "0",
         boxShadow: "0 10px 10px -10px #8c8b8b inset",
     },
+
 };
 
 export default noteTableStyle;

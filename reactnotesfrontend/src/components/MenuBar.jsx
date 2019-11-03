@@ -1,18 +1,20 @@
 import React from "react";
 
+import { useSelector } from "react-redux";
+
 import Menu from "./Menu/Menu";
 
 import HeaderLinks from "./Menu/HeaderLinks";
 
-// TODO Connect store to set login state. Change to class? Pass down is authenticated.
-
 function MenuBar(props) {
     const {...rest} = props;
+
+    const user = useSelector((state) => state.auth.user);
 
     return (
         <Menu
             color="transparent"
-            brand="'Notez' by Karl"
+            brand={user ? `'Notez' by ${user.username}` : "'Notez' by Karl"}
             rightLinks={<HeaderLinks />}
             fixed
             changeColorOnScroll={{

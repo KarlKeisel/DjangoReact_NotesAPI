@@ -25,7 +25,7 @@ export default function notes(state=initialState, action) {
             return noteList;
 
         case 'FETCH_NOTES':  // API Call using thunk, grab all notes.
-            return [...state, ...action.notes];
+            return [...action.notes];
 
         default:
             return state;

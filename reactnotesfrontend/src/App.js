@@ -14,7 +14,7 @@ import NotFound from "./components/NotFound"
 import Login from "./components/Login";
 import Register from "./components/Register";
 import LandingPage from "./components/LandingPage";
-import Example from "./components/Example";
+import Logout from "./components/Logout";
 
 import "./assets/css/App.css";
 import MenuBar from "./components/MenuBar";
@@ -39,7 +39,6 @@ class RootContainerComponent extends Component {
         }}/>
     };
 
-    // TODO Remove MUI Datatables example link and files.
 
     render() {
         let {PrivateRoute} = this;
@@ -51,7 +50,7 @@ class RootContainerComponent extends Component {
                     <Route exact path="/" component={LandingPage}/>
                     <Route exact path="/register" component={Register}/>
                     <Route exact path="/login" component={Login}/>
-                    <Route exact path="/example" component={Example}/>
+                    <Route exact path="/logout" component={Logout}/>
                     <Route component={NotFound}/>
                 </Switch>
             </BrowserRouter>

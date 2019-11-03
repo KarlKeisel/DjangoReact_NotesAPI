@@ -19,7 +19,7 @@ export const loadUser = () => {
                         return {status: res.status, data};
                     })
                 } else {
-                    console.log("Server Error!");  // TODO Change to a link?
+                    console.log("Server Error!");
                     throw res;
                 }
             })
@@ -48,7 +48,7 @@ export const login = (username, password) => {
                         return {status: res.status, data};
                     })
                 } else {
-                    console.log("Server Error!");  // TODO Change to a link?
+                    console.log("Server Error!");
                     throw res;
                 }
             })
@@ -106,7 +106,7 @@ export const register = (username, password) => {
                         return {status: res.status, data}
                     })
                 } else {
-                    console.log("Server Error!");  // TODO Make a separate page?
+                    console.log("Server Error!");
                     throw res;
                 }
             })

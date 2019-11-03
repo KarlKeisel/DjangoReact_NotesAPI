@@ -1,9 +1,8 @@
 /*eslint-disable*/
 import React from "react";
-import DeleteIcon from "@material-ui/icons/Delete";
-import IconButton from "@material-ui/core/IconButton";
-// react components for routing our app without refresh
-import {Link} from "react-router-dom";
+
+import { useSelector, useDispatch } from "react-redux";
+import { auth } from "../../actions"
 
 // @material-ui/core components
 import {makeStyles} from "@material-ui/core/styles";
@@ -12,7 +11,7 @@ import ListItem from "@material-ui/core/ListItem";
 import Tooltip from "@material-ui/core/Tooltip";
 
 // @material-ui/icons
-import {LockOpen, GitHub, Menu, Language} from "@material-ui/icons";
+import {LockOpen, GitHub, Language, ExitToApp} from "@material-ui/icons";
 
 // core components
 import CustomDropdown from "../CustomDropdown/CustomDropdown.js";
@@ -24,16 +23,32 @@ const useStyles = makeStyles(styles);
 
 export default function HeaderLinks(props) {
     const classes = useStyles();
+
+    const isAuth = useSelector((state) => state.auth.isAuthenticated);
+
+    const dispatch = useDispatch();
+    const logout = () => dispatch(auth.logout());
+
     return (
         <List className={classes.list}>
             <ListItem className={classes.listItem}>
-                <Button
+                {isAuth
+                    ? <Button
+                    onClick={logout}
+                    color="transparent"
+                    className={classes.navLink}
+                >
+                    <ExitToApp className={classes.icons}/> Logout
+                </Button>
+                    : <Button
                     href="/login"
                     color="transparent"
                     className={classes.navLink}
                 >
                     <LockOpen className={classes.icons}/> Login
                 </Button>
+                }
+
             </ListItem>
             <ListItem className={classes.listItem}>
                 <Tooltip

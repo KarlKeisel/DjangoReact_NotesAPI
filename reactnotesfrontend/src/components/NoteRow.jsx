@@ -4,17 +4,12 @@ import {makeStyles} from "@material-ui/core";
 
 import styles from "../assets/jss/noteTableStyle"
 
-import GridContainer from "./Grid/GridContainer";
 import GridItem from "./Grid/GridItem";
 import Button from "./CustomButtons/Button";
-import Paper from "@material-ui/core/Paper";
 import Tooltip from "@material-ui/core/Tooltip";
 
 import EditIcon from '@material-ui/icons/Edit';
 import DeleteIcon from '@material-ui/icons/Delete';
-
-import {motion, AnimatePresence} from "framer-motion";
-// TODO Play with motion? Note creation?
 
 const useStyles = makeStyles(styles);
 
@@ -23,7 +18,7 @@ export default function NoteRow({note, id, updateNotes, deleteNotes}) {
 
     return (
         <>
-            <GridItem key={`note_${id}`} xs={10}>
+            <GridItem xs={10}>
                 <h4>{note.text}</h4>
             </GridItem>
 
