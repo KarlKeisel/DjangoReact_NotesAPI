@@ -1,0 +1,36 @@
+body {
+    background-color: #e5e5e5;
+}
+
+h1 {
+    font-size: 3.3125rem;
+    line-height: 1.15em;
+    font-weight: 700;
+    font-family: "Roboto Slab", "Times New Roman", serif;
+}
+
+h2 {
+    font-size: 2.25rem;
+    line-height: 1.5em;
+    font-family: "Roboto Slab", "Times New Roman", serif;
+    margin-bottom: 1rem;
+}
+
+h4 {
+    font-size: 1.125rem;
+    line-height: 1.5em;
+    color: inherit;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    font-weight: 300;
+    font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+}
+
+h5 {
+    font-size: 1.0625rem;
+    line-height: 1.55em;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    font-weight: 300;
+    font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+}

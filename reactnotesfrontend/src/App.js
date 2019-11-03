@@ -4,6 +4,7 @@ import {Route, Switch, BrowserRouter, Redirect} from 'react-router-dom';
 import {Provider, connect} from "react-redux";
 import {createStore, applyMiddleware} from "redux";
 import thunk from "redux-thunk";
+import { composeWithDevTools } from "redux-devtools-extension";
 
 import {auth} from "./actions";
 import notesApp from "./reducers";
@@ -13,11 +14,12 @@ import NotFound from "./components/NotFound"
 import Login from "./components/Login";
 import Register from "./components/Register";
 import LandingPage from "./components/LandingPage";
-import Menu from "./components/Menu";
+import Example from "./components/Example";
 
-import "./App.css";
+import "./assets/css/App.css";
+import MenuBar from "./components/MenuBar";
 
-let store = createStore(notesApp, applyMiddleware(thunk));
+let store = createStore(notesApp, composeWithDevTools(applyMiddleware(thunk)));
 
 class RootContainerComponent extends Component {
 
@@ -37,16 +39,19 @@ class RootContainerComponent extends Component {
         }}/>
     };
 
+    // TODO Remove MUI Datatables example link and files.
+
     render() {
         let {PrivateRoute} = this;
         return (
             <BrowserRouter>
-                <Menu />
+                <MenuBar/>
                 <Switch>
                     <PrivateRoute exact path="/notes" component={NoteMain}/>
                     <Route exact path="/" component={LandingPage}/>
                     <Route exact path="/register" component={Register}/>
                     <Route exact path="/login" component={Login}/>
+                    <Route exact path="/example" component={Example}/>
                     <Route component={NotFound}/>
                 </Switch>
             </BrowserRouter>

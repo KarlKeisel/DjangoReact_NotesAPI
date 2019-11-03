@@ -2,8 +2,11 @@ import React from 'react';
 import {connect} from 'react-redux';
 import {notes, auth} from "../actions";
 
-// Kept import to remind about links through 'react-router-dom'
-// import {Link} from "react-router-dom";
+import {withStyles} from "@material-ui/core";
+
+import styles from "../assets/jss/notesMain"
+import {compose} from "redux";
+import NoteTable from "./Note/NoteTable";
 
 class NoteMain extends React.Component {
     state = {
@@ -35,10 +38,14 @@ class NoteMain extends React.Component {
         // this.resetForm();  // Non API version.
     };
 
+
     render() {
+
+        const {classes} = this.props;
+
         return (
             <div>
-                <h2>Welcome to Karl's Note tracker!</h2>
+                <h2 className={classes.title}>Welcome to Karl's Note tracker!</h2>
                 <hr/>
                 <div style={{textAlign: "right"}}>
                     {/* TODO Handle styling of this area, and fix <a> tag.*/}
@@ -56,23 +63,15 @@ class NoteMain extends React.Component {
                     <input type={'submit'} value={'Save Note'}/>
                     <button onClick={this.resetForm}>Reset</button>
                 </form>
-
-                <h3>Notes</h3>
-                <table>
-                    <tbody>
-                    {this.props.notes.map((note, id) => (
-                        <tr key={`note_${id}`}>
-                            <td>{note.text}</td>
-                            <td>
-                                <button onClick={() => this.selectForEdit(id)}>Edit</button>
-                            </td>
-                            <td>
-                                <button onClick={() => this.props.deleteNote(id)}>Delete</button>
-                            </td>
-                        </tr>
-                    ))}
-                    </tbody>
-                </table>
+                <br />
+                {(this.props.notes).length === 0 && this.props.notes.constructor === Array
+                    ? <h3>Enter a note and save to begin your new life of organization!</h3>
+                    : <NoteTable
+                        notes={this.props.notes}
+                        updateNotes={this.selectForEdit}
+                        deleteNotes={this.props.deleteNote}
+                    />
+                }
             </div>
         )
     }
@@ -109,4 +108,7 @@ const mapDispatchToProps = dispatch => {
 };
 
 // Linking redux to NoteMain component
-export default connect(mapStateToProps, mapDispatchToProps)(NoteMain);
+export default compose(
+    connect(mapStateToProps, mapDispatchToProps),
+    withStyles(styles),
+)(NoteMain);

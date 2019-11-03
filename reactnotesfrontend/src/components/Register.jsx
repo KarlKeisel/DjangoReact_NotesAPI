@@ -9,7 +9,7 @@ import {auth} from "../actions";
 // Styling
 import PropTypes from 'prop-types';
 import {withStyles} from "@material-ui/core";
-import styles from "../assets/jss/registerPage";
+import styles from "../assets/jss/sidePage";
 import GridContainer from "./Grid/GridContainer";
 import Card from "./Card/Card";
 import CardHeader from "./Card/CardHeader";

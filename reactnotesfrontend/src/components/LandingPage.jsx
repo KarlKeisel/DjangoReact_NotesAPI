@@ -5,6 +5,7 @@ import classNames from "classnames";
 import {makeStyles} from "@material-ui/core";
 
 import styles from "../assets/jss/landingPage";
+
 import Parallax from "./Parallax/Parallax";
 import GridContainer from "./Grid/GridContainer";
 import GridItem from "./Grid/GridItem";
@@ -14,12 +15,12 @@ import PlayCircleOutlineIcon from '@material-ui/icons/PlayCircleOutline';
 
 import {motion} from "framer-motion";
 import ProductSection from "./LandingPageSections/ProductSection";
+import WorkSection from "./LandingPageSections/WorkSection";
+import Footer from "./Footer";
 
 const useStyles = makeStyles(styles);
 
-// TODO Figure out font sizing and type in style pages. (A bit soft)
-
-function LandingPage(props) {
+function LandingPage() {
     const classes = useStyles();
 
     return (
@@ -42,7 +43,7 @@ function LandingPage(props) {
                                 <Button
                                     color={"info"}
                                     size={"lg"}
-                                    href={"https://www.youtube.com/watch?v=dQw4w9WgXcQ&ref=creativetim"}
+                                    href={"https://www.youtube.com/watch?v=5ARRFFFSDX8"}
                                     target={"_blank"}
                                     rel="noopener noreferrer"
                                 >
@@ -56,14 +57,13 @@ function LandingPage(props) {
             </Parallax>
             <div className={classNames(classes.main, classes.mainRaised)}>
                 <div className={classes.container}>
-                    <ProductSection />
-                        {/* TeamSection Here */}
-                        {/* WorkSection Here */}
+                    <ProductSection/>
+                    <WorkSection/>
                 </div>
             </div>
-            {/*  Footer Here  */}
+            <Footer/>
         </div>
-)
+    )
 }
 
 export default LandingPage;

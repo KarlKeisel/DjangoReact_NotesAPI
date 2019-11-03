@@ -1,46 +1,34 @@
 import React from 'react';
 
 import {motion} from 'framer-motion';
-import {Typography} from "@material-ui/core";
+import {makeStyles, Typography} from "@material-ui/core";
 
 //images
-import forest from '../assets/img/ForestFog.jpg';
+import image from '../assets/img/NotLostButHere.jpg';
 
-const style = {
-    img: {
-        height: "100%",
-        width: "100%",
-        position: "absolute",
+import styles from "../assets/jss/sidePage"
+import GridContainer from "./Grid/GridContainer";
+import GridItem from "./Grid/GridItem";
 
-    },
-    text: {
-        textAlign: "center",
-        position: "center"
-    }
-};
-
+const useStyles = makeStyles(styles);
 
 const NotFound = () => {
+    const classes = useStyles();
+
     return (
-        <div>
-            {/*<img src={forest} alt="Forest" style={style.img} />*/}
-            {/*    <motion.div*/}
-            {/*        animate={{scale: 0.1}}*/}
-            {/*        transition={{duration: 30}}*/}
-            {/*    >*/}
-            {/*        <Typography*/}
-            {/*            variant={"h2"}*/}
-            {/*            color={"secondary"}*/}
-            {/*        >*/}
-            {/*            Not Found*/}
-            {/*        </Typography>*/}
-            {/*        <Typography*/}
-            {/*            color={"secondary"}*/}
-            {/*            variant={"subtitle1"}*/}
-            {/*        >*/}
-            {/*            The page you're looking for does not exist.*/}
-            {/*        </Typography>*/}
-            {/*    </motion.div>*/}
+        <div
+            className={classes.pageHeader}
+            style={{
+                backgroundImage: "url(" + image + ")",
+                backgroundSize: "cover",
+                backgroundPosition: "top center"
+            }}
+        >
+            <div className={classes.container}>
+                <GridContainer justify={"center"}>
+                    <h1 style={{letterSpacing: "10px"}}>404</h1>
+                </GridContainer>
+            </div>
         </div>
     )
 };

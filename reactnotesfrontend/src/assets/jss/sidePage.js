@@ -1,4 +1,4 @@
-import { container, links } from "./general";
+import { container } from "./general";
 
 const signupPageStyle = {
   container: {

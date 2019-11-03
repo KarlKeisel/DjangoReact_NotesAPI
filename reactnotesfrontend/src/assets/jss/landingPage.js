@@ -23,7 +23,9 @@ const landingPageStyle = {
   main: {
     background: "#FFFFFF",
     position: "relative",
-    zIndex: "3"
+    zIndex: "3",
+    paddingRight: "45px",
+  //  paddingRight needed to fix container off-centered in Parallax
   },
   mainRaised: {
     margin: "-60px 30px 0px",

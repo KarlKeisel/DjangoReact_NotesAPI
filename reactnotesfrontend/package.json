@@ -9,6 +9,7 @@
     "classnames": "latest",
     "framer-motion": "^1.6.14",
     "material-kit-react": "^1.8.0",
+    "mui-datatables": "^2.12.4",
     "prop-types": "latest",
     "react": "^16.10.2",
     "react-dom": "^16.10.2",
@@ -16,6 +17,7 @@
     "react-router-dom": "^5.1.2",
     "react-scripts": "3.2.0",
     "redux": "^4.0.4",
+    "redux-devtools-extension": "^2.13.8",
     "redux-thunk": "^2.3.0",
     "yarn": "1.19.1"
   },
