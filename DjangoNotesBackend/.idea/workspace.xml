@@ -1,7 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="6187a150-0acc-4baa-aea2-e616d5a477eb" name="Default Changelist" comment="" />
+    <list default="true" id="6187a150-0acc-4baa-aea2-e616d5a477eb" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/Requirements.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/config.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -94,7 +99,7 @@
       <updated>1570733850471</updated>
       <workItem from="1570734019102" duration="5879000" />
       <workItem from="1570849371486" duration="15976000" />
-      <workItem from="1572142033615" duration="1681000" />
+      <workItem from="1572142033615" duration="3123000" />
     </task>
     <servers />
   </component>

@@ -1,5 +1,6 @@
 # secret stuff
 environment_variables.env
+config.json
 
 # Django stuff
 **/__pycache__
