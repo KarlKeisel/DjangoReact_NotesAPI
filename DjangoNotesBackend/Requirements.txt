@@ -1,6 +1,6 @@
 asgiref==3.2.2
 cffi==1.13.0
-cryptography==2.8
+cryptography==3.2
 Django==3.0a1
 django-cors-middleware==1.4.0
 django-rest-knox==4.1.0
